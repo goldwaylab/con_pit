@@ -1,27 +1,34 @@
-
 # con_pit
 
-## Description
+Task data, analysis code and computational models for **Adolescents flexibly adapt action selection based on controllability inferences**
+(Raab, Goldway, Foord & Hartley, *Learning & Memory*, 2024; [DOI](https://doi.org/10.1101/lm.053901.123), [OSF project](https://osf.io/e49ua/)).
 
-**Adolescents flexibly adapt action selection based on controllability inferences**
+## Overview
 
-This repository contains tasks, anonymized data, and analysis code for the study titled: "Adolescents flexibly adapt action selection based on controllability inferences."
+90 participants aged 8-27 performed a probabilistic Go/No-Go learning task in controllable and uncontrollable environments.
+The analyses test how action selection adapts to inferred controllability across development and fit reinforcement-learning models to the choices.
 
-## Task
+## Repository contents
 
-We conducted experiments involving 90 participants aged 8-27, who performed a probabilistic Go/No-Go learning task in both controllable and uncontrollable environments.
+| Path | Contents |
+|---|---|
+| `Con_pit_analysis_main.Rmd` | R Markdown analysis: regressions, model comparison and figures |
+| `Con_pit_analysis_main.html` | Rendered output of the analysis |
+| `computational_modeling_code/` | MATLAB reinforcement-learning models. Entry point: `Main_fitting_code.m`. Likelihood functions in `lik_functions/`, parameter recovery in `param_recovery/`. Uses the [mfit](https://github.com/sjgershman/mfit) toolbox (`mfit-master/`, with its own license). |
+| `data/task_data/` | Per-participant task files (MATLAB `.mat` files and logs) |
+| `data/age_cov_n90.csv` | Age, age group and gender per participant |
+| `data/subDemographicStats.csv` | Sample composition |
+| `data/w_trial_by_trial.csv` | Trial-by-trial data used in the R analysis |
 
-## Data
+## Requirements
 
-Raw data used for regression analysis and reinforcement-learning modeling, stored in MATLAB files (.mat), can be found in the "data" folder.
+- MATLAB R2023a with the Optimization Toolbox (models are fitted with `fmincon`).
+- R with: `R.matlab`, `afex`, `cowplot`, `dplyr`, `emmeans`, `ggplot2`, `grid`, `gridExtra`, `lme4`, `modelbased`, `nlme`, `pander`, `psych`, `rempsyc`, `report`, `see`, `segmented`, `tidyverse`.
 
-## Analysis Code
+## Running
 
-Data analysis was conducted in R using the R Markdown analysis script located in the "Con_pit_analysis_main" folder. Additionally, code for reinforcement learning modeling can be found in the "computational_modeling_code" folder, with the main script named "Main_fitting_code.m."
-
-## Computational Modeling
-
-The computational models were fitted using the "fmincon" function from the Optimization Toolbox in MATLAB 2023a.
+1. **Modeling (MATLAB):** run `computational_modeling_code/Main_fitting_code.m`.
+2. **Analysis (R):** knit `Con_pit_analysis_main.Rmd`. The file paths at the top point to the data files, so adjust them to your local copy.
 
 ## Citation
 
