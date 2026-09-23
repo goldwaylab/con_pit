@@ -23,3 +23,6 @@ Data analysis was conducted in R using the R Markdown analysis script located in
 
 The computational models were fitted using the "fmincon" function from the Optimization Toolbox in MATLAB 2023a.
 
+## Citation
+
+Raab, H. A., Goldway, N., Foord, C., & Hartley, C. A. (2024). Adolescents flexibly adapt action selection based on controllability inferences. *Learning & Memory, 31*(3), a053901. https://doi.org/10.1101/lm.053901.123

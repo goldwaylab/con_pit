@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the article below."
+title: "Adolescents flexibly adapt action selection based on controllability inferences"
+type: software
+repository-code: "https://github.com/goldwaylab/con_pit"
+authors:
+  - family-names: Raab
+    given-names: "Hillary A."
+  - family-names: Goldway
+    given-names: "Noam"
+  - family-names: Foord
+    given-names: "Careen"
+  - family-names: Hartley
+    given-names: "Catherine A."
+preferred-citation:
+  type: article
+  title: "Adolescents flexibly adapt action selection based on controllability inferences"
+  journal: "Learning & Memory"
+  volume: 31
+  issue: 3
+  start: a053901
+  doi: 10.1101/lm.053901.123
+  year: 2024
+  authors:
+    - family-names: Raab
+      given-names: "Hillary A."
+    - family-names: Goldway
+      given-names: "Noam"
+    - family-names: Foord
+      given-names: "Careen"
+    - family-names: Hartley
+      given-names: "Catherine A."
